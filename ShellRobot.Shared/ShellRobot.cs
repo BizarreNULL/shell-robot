@@ -1,12 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
+
+using System.Net;
+
+using System.Linq;
+
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
-using System.Net;
+
+using System.Collections.Generic;
+
 using System.Text.Json;
 using System.Text.RegularExpressions;
+
 using System.Threading.Tasks;
+
 using ShellRobot.Shared.Models;
 
 namespace ShellRobot.Shared

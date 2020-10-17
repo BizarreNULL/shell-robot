@@ -12,5 +12,8 @@ namespace ShellRobot.Shared.Models
 
         [JsonPropertyName("validations")]
         public Validation Validation { get; set; }
+        
+        [JsonIgnore]
+        public string Value { get; set; }
     }
 }

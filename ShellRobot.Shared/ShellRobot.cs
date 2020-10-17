@@ -1,11 +1,12 @@
 ﻿using System;
-
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 
 using System.Net;
-
+using System.Text.Json;
 using System.Threading.Tasks;
+using ShellRobot.Shared.Models;
 
 namespace ShellRobot.Shared
 {
@@ -72,6 +73,23 @@ namespace ShellRobot.Shared
             File.Delete(source);
 
             Directory.Move(Path.Combine(Path.GetTempPath(), "shell-robot-templates-main"), _home);
+        }
+
+        /// <summary>
+        /// List available reverse shell templates.
+        /// </summary>
+        /// <returns>Array containing the list of available templates.</returns>
+        public async Task<List<Template>> ListTemplatesAsync()
+        {
+            var templates = new List<Template>();
+            
+            foreach (var path in Directory.GetFiles(_home, "*.json"))
+            {
+                var template = await JsonSerializer.DeserializeAsync<Template>(File.OpenRead(path));
+                templates.Add(template);
+            }
+
+            return templates;
         }
     }
 }

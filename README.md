@@ -67,7 +67,7 @@ Let's create one by example. The current engine waits for a JSON file, with the 
                     {
                         "description": "Only letters allowed",
                         "expressions": [
-                            ""
+                            "^[a-zA-Z]+$"
                         ]
                     }
                 ]

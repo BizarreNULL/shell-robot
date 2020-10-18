@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://github.com/BizarreNULL/mobile-offsec/">
+<a href="https://github.com/BizarreNULL/shell-robot/">
   <img src="./assets/logo.png" width="350" />
 </a>
 </p>

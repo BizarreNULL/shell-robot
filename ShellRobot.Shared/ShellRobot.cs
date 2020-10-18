@@ -75,7 +75,7 @@ namespace ShellRobot.Shared
             Directory.Delete(_home, true);
 
             var source = Path.Combine(Path.GetTempPath(), $"{new Guid().ToString()}.zip");
-            await new WebClient().DownloadFileTaskAsync(Repository, source);
+             await new WebClient().DownloadFileTaskAsync(Repository, source);
 
             ZipFile.ExtractToDirectory(source, Path.GetTempPath());
             File.Delete(source);
@@ -93,7 +93,8 @@ namespace ShellRobot.Shared
 
             foreach (var path in Directory.GetFiles(_home, "*.json"))
             {
-                var template = await JsonSerializer.DeserializeAsync<Template>(File.OpenRead(path));
+                await using var stream = File.OpenRead(path);
+                var template = await JsonSerializer.DeserializeAsync<Template>(stream);
                 templates.Add(template);
             }
 

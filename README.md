@@ -94,9 +94,10 @@ I started the project for learning a bit more about C# 9.0, but as the maturity 
 
 - [x] **0x00**: Make the satuday project work;
 - [x] **0x01**: Documentation of `.json` template configuration (check example [here](https://github.com/BizarreNULL/shell-robot-templates/blob/main/bash-tcp.json));
-- [ ] **0x02**: Create GitHub Action for validate new PRs with new templates on the [other](https://github.com/BizarreNULL/shell-robot-templates) _repo_;
-- [ ] **0x03**: Create GitHub Action for CD of the library on NuGet;
-- [ ] **0x04**: Make a CLI (or webapi) consuming the `ShellRobot` library and community templates. 
+- [x] **0x02**: Create GitHub Action for validate library features on every PR and commit to [main](https://github.com/BizarreNULL/shell-robot/tree/main);
+- [ ] **0x03**: Create GitHub Action for validate new PRs with new templates on the [other](https://github.com/BizarreNULL/shell-robot-templates) _repo_;
+- [ ] **0x04**: Create GitHub Action for CD of the library on NuGet;
+- [ ] **0x05**: Make a CLI (or webapi) consuming the `ShellRobot` library and community templates. 
 
 
 

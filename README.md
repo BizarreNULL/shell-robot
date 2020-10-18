@@ -102,4 +102,4 @@ I started the project for learning a bit more about C# 9.0, but as the maturity 
 
 ## Licenses
 
-[Shell Robot](https://github.com/BizarreNULL/shell-robot) project icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com. The source code is licensed under [WTFPL](http://www.wtfpl.net/).</a>
+[Shell Robot](https://github.com/BizarreNULL/shell-robot) project icons made by [Freepik](www.flaticon.com/authors/freepik) from [Flaticon](https://www.flaticon.com/). The source code is licensed under [WTFPL](http://www.wtfpl.net/).

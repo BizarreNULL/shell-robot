@@ -21,7 +21,7 @@
 
 Playing CTFs or even on red teaming workflow, is necessary to memorize a huge collection of reverse shell templates (one-liners or not) for PHP, Linux, macOS, or based in some chaining with some tools. The time lost writing a *revshell* can be the same to lose the time window for persisting access.
 
-The ShellRobot library exposes a very simple API (check the code snippet bellow) to automate the creation of any kind of reverse shell (or things that can be put on our template configuration file), and as a dotnet Core 3.X library, can be integrated on any dotnet program, like CLIs or REST APIs for automatic *revshells* based in some parameters.
+The ShellRobot library exposes a very simple API (check the code snippet bellow) to automate the creation of any kind of reverse shell (or things that can be put on our template configuration file), and as a .NET5 library, can be integrated on any dotnet program, like CLIs or REST APIs for automatic *revshells* based in some parameters.
 
 ```csharp
 // Make a new instance of the library
@@ -31,7 +31,7 @@ var shellRobot = new ShellRobot();
 await shellRobot.UpdateAsync();
 
 // Parse any valid template by title, with their specific parameters
-var revshell = await ParseTemplateAsync("Some random complex revshell", new[]
+var revShell = await ParseTemplateAsync("Some random complex revshell", new[]
 {
     "param1",
     "value of param1",

